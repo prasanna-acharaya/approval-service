@@ -12,6 +12,8 @@ spring:
     endpoint:
       health:
         show-details: always
+        probes:
+          enabled: true
   mail:
     host: ${MAIL_HOST:smtp.gmail.com}
     port: ${MAIL_PORT:587}
