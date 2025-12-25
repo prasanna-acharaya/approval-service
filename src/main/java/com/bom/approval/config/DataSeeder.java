@@ -22,8 +22,12 @@ public class DataSeeder implements CommandLineRunner {
 
     @Override
     public void run(String... args) {
-        seedUsers();
-        seedFlows();
+        try {
+            seedUsers();
+            seedFlows();
+        } catch (Exception e) {
+            log.warn("Data seeding failed. This might happen if the database is not yet ready: {}", e.getMessage());
+        }
     }
 
     private void seedUsers() {
