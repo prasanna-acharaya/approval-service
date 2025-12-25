@@ -19,4 +19,4 @@ services:
       - key: PORT
         value: "8081"
       - key: MONGO_URI
-        value: "" # User should set this in Koyeb UI
+        value: "mongodb://mongodb:27017/approval_service"
