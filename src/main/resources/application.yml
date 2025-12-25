@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: approval-service
+  data:
+    mongodb:
+      uri: ${MONGO_URI:mongodb://localhost:27017/approval_service}
+  mail:
+    host: ${MAIL_HOST:smtp.gmail.com}
+    port: ${MAIL_PORT:587}
+    username: ${MAIL_USERNAME:}
+    password: ${MAIL_PASSWORD:}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+server:
+  port: 8081
+
+logging:
+  level:
+    com.bom.approval: DEBUG
