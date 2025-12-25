@@ -1,3 +1,7 @@
+server:
+  port: ${PORT:8081}
+  forward-headers-strategy: native
+
 spring:
   application:
     name: approval-service
@@ -29,6 +33,10 @@ spring:
 server:
   port: ${PORT:8081}
 
-logging:
-  level:
-    com.bom.approval: DEBUG
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+  server-variable:
+    protocol: https
