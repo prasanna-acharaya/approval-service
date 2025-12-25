@@ -1,0 +1,22 @@
+name: approval-service
+services:
+  - name: approval-service
+    type: web
+    image: approval-service
+    ports:
+      - port: 8081
+        protocol: http
+    routes:
+      - path: /
+        port: 8081
+    health_checks:
+      - http:
+          path: /actuator/health
+          port: 8081
+          initial_delay: 60
+          interval: 30
+    env:
+      - key: PORT
+        value: "8081"
+      - key: MONGO_URI
+        value: "" # User should set this in Koyeb UI
