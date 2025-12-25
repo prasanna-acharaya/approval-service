@@ -39,6 +39,11 @@ public class DsaApprovalController {
         return ResponseEntity.ok(dsaFlowService.getPendingApprovals(userId));
     }
 
+    @GetMapping("/ping")
+    public ResponseEntity<Void> ping() {
+        return ResponseEntity.ok().build();
+    }
+
     @Data
     public static class AuthorizeRequest {
         private String dsaId;
