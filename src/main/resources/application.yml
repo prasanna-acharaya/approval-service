@@ -30,9 +30,6 @@ spring:
           starttls:
             enable: true
 
-server:
-  port: ${PORT:8081}
-
 springdoc:
   api-docs:
     path: /v3/api-docs
@@ -40,3 +37,8 @@ springdoc:
     path: /swagger-ui.html
   server-variable:
     protocol: https
+
+logging:
+  level:
+    com.bom.approval: DEBUG
+    org.springframework.data.mongodb: DEBUG

@@ -19,4 +19,4 @@ services:
       - key: PORT
         value: "8081"
       - key: MONGO_URI
-        value: "mongodb://mongodb:27017/approval_service"
+        value: "mongodb://mongo.accused-marilee.internal:27017/approval_service"
